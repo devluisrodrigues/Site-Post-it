@@ -261,3 +261,41 @@ Algumas informações úteis e dicas:
     width: 100%;
     margin-top: 5px;
  }
+
+ .delete-button{
+  height: 18px;
+  width: 18px;
+  border-color: transparent;
+  background-color: transparent;
+  border: none;
+ }
+
+ .card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+ }
+
+ .title{
+  font-size: 6.5em;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #2c2c2c;
+ }
+ .subtitle2{
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #2c2c2c;
+ }
+ .img404{
+  width: 400px;
+  height: auto;
+ }
+ .btn404{
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 5%;
+  width: 20%;
+  height: auto;
+ }

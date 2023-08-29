@@ -1,14 +1,16 @@
 <div class="card">
+    <div class="card-header">
+        <form action="/delete/" method="post"> 
+            <input type="hidden" name="id" value="{id}">
+            <button type="submit" class=""><img src="../../img/erase_icon.png" alt="Apagar" class="delete-button"></button>
+        </form>
+        <form action="/edit/" method="post"> 
+            <input type="hidden" name="id" value="{id}">
+            <button type="submit" class=""><img src="../../img/edit_icon.png" alt="Editar" class="delete-button"></button>
+        </form>
+    </div>
     <h3 class="card-title">{title}</h3>
     <div class="card-content">
         <p>{details}</p>
     </div>
-    <form action="/delete/" method="post"> 
-        <input type="hidden" name="id" value="{id}">
-        <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
-    <form action="/edit/" method="post"> 
-        <input type="hidden" name="id" value="{id}">
-        <button type="submit" class="btn btn-danger">Edit</button>
-    </form>
 </div>

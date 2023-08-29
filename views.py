@@ -66,3 +66,6 @@ def salvar(request):
             itens[2] = valor.replace('+', ' ')
     update_data(itens)
     return build_response(code=303, reason='See Other', headers='Location: /')
+
+def not_found(request):
+    return build_response(body=load_template('404.html'), code=404, reason='Not Found')

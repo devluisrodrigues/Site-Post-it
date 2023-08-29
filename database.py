@@ -40,3 +40,4 @@ class Database:
     def delete(self,note_id):
         cur = self.conn.cursor()
         cur.execute('''DELETE FROM note WHERE id = ?''', (note_id,))
+        self.conn.commit()

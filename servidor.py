@@ -1,7 +1,7 @@
 import socket
 from pathlib import Path
 from utils import extract_route, read_file, build_response
-from views import index, delete, edit, salvar
+from views import index, delete, edit, salvar,not_found
 
 CUR_DIR = Path(__file__).parent
 SERVER_HOST = '0.0.0.0'
@@ -45,7 +45,7 @@ while True:
         response = salvar(request)
     else:
         # Se o arquivo não existir, retorna Not Found
-        response = build_response()
+        response = not_found(request)
 
     client_connection.sendall(response)
 
