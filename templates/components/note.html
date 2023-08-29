@@ -3,8 +3,12 @@
     <div class="card-content">
         <p>{details}</p>
     </div>
-    <form action="/delete/{id}" method="post"> 
+    <form action="/delete/" method="post"> 
         <input type="hidden" name="id" value="{id}">
         <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <form action="/edit/" method="post"> 
+        <input type="hidden" name="id" value="{id}">
+        <button type="submit" class="btn btn-danger">Edit</button>
     </form>
 </div>

@@ -1,4 +1,4 @@
-from utils import load_data, load_template, update_data, build_response, delete_data
+from utils import load_data, load_template, add_data, build_response, delete_data,load_data_id, update_data
 
 def index(request):
     # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
@@ -21,7 +21,7 @@ def index(request):
                 itens[0] = valor.replace('+', ' ')
             elif chave == 'detalhes':
                 itens[1] = valor.replace('+', ' ')
-        update_data(itens)
+        add_data(itens)
         return build_response(code=303, reason='See Other', headers='Location: /')
         
             
@@ -37,8 +37,32 @@ def index(request):
 
     return build_response(body=load_template('index.html').format(notes=notes))
 
-def delete(route):
-    id = route.split('/')[1]
+def delete(request):
+    linhas = request.splitlines()
+    id = linhas[-1].split('=')[1]
     delete_data(id)
     return build_response(code=303, reason='See Other', headers='Location: /')
 
+def edit(request):
+    linhas = request.splitlines()
+    id = linhas[-1].split('=')[1]
+    title, content = load_data_id(id)
+    return build_response(body=load_template('edit.html').format(id=id,title=title, details=content))
+
+def salvar(request):
+    request = request.replace('\r', '')  # Remove caracteres indesejados
+    # Cabeçalho e corpo estão sempre separados por duas quebras de linha
+    partes = request.split('\n\n')
+    corpo = partes[1]
+
+    itens = [0,0,0]
+    for chave_valor in corpo.split('&'):
+        chave, valor = chave_valor.split('=')
+        if chave == 'id':
+            itens[0] = valor.replace('+', ' ')
+        elif chave == 'titulo':
+            itens[1] = valor.replace('+', ' ')
+        elif chave == 'detalhes':
+            itens[2] = valor.replace('+', ' ')
+    update_data(itens)
+    return build_response(code=303, reason='See Other', headers='Location: /')

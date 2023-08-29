@@ -1,7 +1,7 @@
 import socket
 from pathlib import Path
 from utils import extract_route, read_file, build_response
-from views import index, delete
+from views import index, delete, edit, salvar
 
 CUR_DIR = Path(__file__).parent
 SERVER_HOST = '0.0.0.0'
@@ -20,12 +20,16 @@ while True:
     request = client_connection.recv(1024).decode()
     print('*'*100)
     print(request)
+
     route = extract_route(request)
+
     print("ROUTE: ")
     print(route)
+
     filepath = CUR_DIR / route
     print("FILEPATH: ")
     print(filepath)
+
     if filepath.is_file():
         if filepath.suffix == '.css':
             response = build_response(headers="Content-Type: text/css; charset=utf-8") + read_file(filepath)
@@ -33,9 +37,14 @@ while True:
             response = build_response() + read_file(filepath)
     elif route == '':
         response = index(request)
-    elif "delete" in route:
-        response = delete(route)
+    elif route[0:6] == 'delete':
+        response = delete(request)
+    elif route[0:4] == 'edit':
+        response = edit(request)
+    elif route[0:6] == 'salvar':
+        response = salvar(request)
     else:
+        # Se o arquivo não existir, retorna Not Found
         response = build_response()
 
     client_connection.sendall(response)

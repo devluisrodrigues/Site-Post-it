@@ -7,8 +7,6 @@ db = Database('data/banco')
 
 def extract_route(route):
     "Separa a primeira linha da requisicao"
-    # firstLine = route.split('\n')[0]
-    # return "/".join(firstLine.split('/')[1:]).split(" ")[0]
     return route.split()[1][1:] if len(route.split()) > 1 else ""
 
 def read_file(path):
@@ -21,18 +19,6 @@ def read_file(path):
     except:
         return None
     
-def load_data():
-    notes = db.get_all()
-    return notes
-
-
-def update_data(data):
-    db.add(Note(title=data[0], content=data[1]))
-
-def delete_data(id):
-    db.delete(id)
-
-
 def load_template(Template):
     "Carrega os dados do arquivo html"
     try:
@@ -49,4 +35,20 @@ def build_response(body='', code=200, reason='OK', headers=''):
     if headers == '':
         headers = "Content-Type: text/html; charset=utf-8"
     return (f"HTTP/1.1 {code} {reason}\n{headers}\n\n{body}").encode()
-    
+
+def load_data():
+    notes = db.get_all()
+    return notes
+
+def load_data_id(id):
+    note = db.get(id)
+    return note.title, note.content
+
+def add_data(data):
+    db.add(Note(title=data[0], content=data[1]))
+
+def delete_data(id):
+    db.delete(id)
+
+def update_data(data):
+    db.update(Note(id=data[0], title=data[1], content=data[2]))

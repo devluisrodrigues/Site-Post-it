@@ -24,10 +24,13 @@ class Database:
     def get_all(self):
         cur = self.conn.cursor()
         cursor = cur.execute("SELECT id, title, content FROM note")
-        note = []
-        for linha in cursor:
-            note.append(Note(linha[0], linha[1], linha[2]))
-        return note
+        return [(Note(linha[0], linha[1], linha[2])) for linha in cursor]
+
+    def get(self, note_id):
+        cur = self.conn.cursor()
+        cursor = cur.execute("SELECT id, title, content FROM note WHERE id = ?", (note_id,))
+        note = [(Note(linha[0], linha[1], linha[2])) for linha in cursor]
+        return note[0]
     
     def update(self, entry):
         cur = self.conn.cursor()
