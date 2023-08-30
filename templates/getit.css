@@ -287,15 +287,55 @@ Algumas informações úteis e dicas:
   font-weight: bold;
   font-family: 'Arial', sans-serif;
   color: #2c2c2c;
+  margin-top: 1.%;
+  margin-bottom: 1.5%;
  }
  .img404{
-  width: 400px;
+  width: 380px;
   height: auto;
  }
  .btn404{
+  text-decoration: none;
+  color: #2c2c2c;
+  font-weight: bold;
   font-size: 1.5em;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
   width: 20%;
   height: auto;
  }
+ .left-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 65%;
+ }
+ .night-mode {
+  background-color: rgb(61, 56, 56);
+}
+.form-card-night-mode{
+  background-color: rgb(122, 110, 110);
+  color: white;
+}
+.card-font-color-night-mode{
+  color: rgb(219, 216, 216);
+}
+.card-color-1-night-mode {
+  background-color: #a89778;
+}	
+
+.card-color-2-night-mode {
+  background-color: #3b6572;
+}
+
+.card-color-3-night-mode {
+  background-color: #9a4a71;
+}
+
+.card-color-4-night-mode {
+  background-color: #988d54;
+}
+
+.card-color-5-night-mode {
+  background-color: #426950;
+}

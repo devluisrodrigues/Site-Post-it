@@ -17,22 +17,27 @@
   />
   <link rel="stylesheet" href="templates/getit.css" />
 </head>
-<body>
+<body id = "body">
   <div class="appbar">
     <img src="img/logo-getit.png" class="logo" />
     <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+    <div class="left-flex">
+      <button class="btn" id="night-mode-toggle">Modo noturno</button>
+    </div>
   </div>
 
   <main class="container">
     <!-- method="post" foi removido apenas para o exemplo funcionar sem o servidor -->
-    <form class="form-card" method="post">
+    <form class="form-card" method="post" id="form">
       <input
+        id = "formTitle"
         class="form-card-title"
         type="text"
         name="titulo"
         placeholder="Título"
       />
       <textarea
+        id = "formDetails"
         class="autoresize"
         name="detalhes"
         placeholder="Digite o conteúdo..."
