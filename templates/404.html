@@ -17,18 +17,24 @@
   />
   <link rel="stylesheet" href="templates/getit.css" />
 </head>
-<body>
+<body id = "body">
     <div class="appbar">
         <img src="img/logo-getit.png" class="logo" />
         <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+        <div class="left-flex">
+          <button class="btn" id="night-mode-toggle">Modo noturno</button>
+        </div>
     </div>
     <main class="">
         <div class="container">
-            <h1 class="title">404</h1>
-            <p class="subtitle2">Página não encontrada</p>
+            <h1 class="title texterror" >404</h1>
+            <p class="subtitle2 texterror">Página não encontrada</p>
             <img src="../img/404.gif" alt="Página não encontrada" class="img404">
-            <a href="/" class="btn btn404">Voltar para a página inicial</a>
+            <a href="/" class="btn btn404 texterror">Voltar para a página inicial</a>
 
         </div>
 
     </main>
+    <script type="text/javascript" src="../templates/getit.js"></script>
+  </body>
+</html>

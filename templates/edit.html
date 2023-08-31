@@ -17,16 +17,20 @@
   />
   <link rel="stylesheet" href="../templates/getit.css" />
 </head>
-<body>
+<body id = "body">
   <div class="appbar">
     <img src="../img/logo-getit.png" class="logo" />
-    <span class="subtitle">Editando o Post-it</span>
+    <span class="subtitle">Editando o Post-it         </span>
+    <div class="left-flex">
+      <button class="btn" id="night-mode-toggle">Modo noturno</button>
+    </div>
   </div>
 
   <main class="container">
-    <form action="/salvar/" class="form-card" method="post">
+    <form action="/salvar/" class="form-card" method="post" id = "form">
       <input type="hidden" name="id" value="{id}">
       <input
+        id = "formTitle"
         class="form-card-title"
         type="text"
         name="titulo"
@@ -34,6 +38,7 @@
         value="{title}"
       />
       <textarea
+        id = "formDetails"
         class="autoresize"
         name="detalhes"
         placeholder="Digite o conteúdo..."
@@ -45,4 +50,5 @@
     </form>
   </main>
 </body>
+<script type="text/javascript" src="../templates/getit.js"></script>
 </html>

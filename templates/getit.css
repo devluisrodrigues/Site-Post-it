@@ -339,3 +339,10 @@ Algumas informações úteis e dicas:
 .card-color-5-night-mode {
   background-color: #426950;
 }
+
+.texterror{
+  color: black;
+}
+.texterror-night-mode{
+  color: white;
+}

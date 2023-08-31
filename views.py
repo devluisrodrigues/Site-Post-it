@@ -1,5 +1,5 @@
 from utils import load_data, load_template, add_data, build_response, delete_data,load_data_id, update_data
-
+from urllib.parse import unquote_plus
 def index(request):
     # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
     if request.startswith('POST'):
@@ -18,9 +18,9 @@ def index(request):
         for chave_valor in corpo.split('&'):
             chave, valor = chave_valor.split('=')
             if chave == 'titulo':
-                itens[0] = valor.replace('+', ' ')
+                itens[0] = unquote_plus(valor)
             elif chave == 'detalhes':
-                itens[1] = valor.replace('+', ' ')
+                itens[1] = unquote_plus(valor)
         add_data(itens)
         return build_response(code=303, reason='See Other', headers='Location: /')
         
@@ -61,9 +61,9 @@ def salvar(request):
         if chave == 'id':
             itens[0] = valor.replace('+', ' ')
         elif chave == 'titulo':
-            itens[1] = valor.replace('+', ' ')
+            itens[1] = unquote_plus(valor)
         elif chave == 'detalhes':
-            itens[2] = valor.replace('+', ' ')
+            itens[2] = unquote_plus(valor)
     update_data(itens)
     return build_response(code=303, reason='See Other', headers='Location: /')
 
