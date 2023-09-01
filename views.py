@@ -27,7 +27,9 @@ def index(request):
             
         
     # Cria uma lista de <li>'s para cada anotação
-    # Se tiver curiosidade: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+    # Se tiver curiosidade:
+    # https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+    
     note_template = load_template('components/note.html')
     notes_li = [
         note_template.format(id = Note.id,title=Note.title, details=Note.content)
