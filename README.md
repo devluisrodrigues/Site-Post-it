@@ -6,35 +6,35 @@ Email: luisasr@al.insper.edu.br
 Este site contém os arquivos relacionados à entrega do projeto de Tecnologias Web, cujo objetivo é simular um mural de Post-its. O usuário pode adicionar novas anotações, além de editá-las ou apagá-las.
 
 Ao Atualizar o Site, a cor e inclinação dos Post-It são aleatorizados.
+![Refresh](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/6b33e367-0824-4b46-9064-0966db625aa2)
 
-![Refresh](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/e29f0b82-9ea0-4922-99e6-1f7d9474397a)
 
 ## Demonstração de Adição
 
 O GIF abaixo demonstra o processo de adição de um novo Post-it:
-![Add Post-it](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/ed1c3f69-b35a-47a1-a14a-ba31a2c46a11)
+![Add Post-it](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/5c50cf6c-ce5b-4fc0-add6-c198bc36705b)
 
 ## Demonstração de Edição
 
 O GIF abaixo mostra o processo de edição de um Post-it já existente:
-![Edicao](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/18c8ed06-171e-4b2f-9a32-785e191096df)
+![Edicao](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/53c974a8-256b-4e53-b3ab-59feeeb84278)
 
 
 ## Demonstração de Modo Noturno
 
 Este GIF mostra como ativar o modo noturno para facilitar a visualização em ambientes com pouca luz:
-![Modo Noturno](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/038393dc-78c2-4df9-b3eb-5a4de577c427)
+![Modo Noturno](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/50af1f94-7d3a-4831-9e6a-4c20e5b3a731)
 
 ## Demonstração de Exclusão
 
 O GIF a seguir ilustra como apagar um Post-it:
-![Delete](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/d88b5e75-b565-42d0-a55d-ae8a3e340795)
+![Delete](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/41212926-8859-4d7a-b75c-fe1888b2fc11)
 
 ## Demonstração de Organização dos Post-its
 
 O GIF abaixo exibe diferentes formas de organizar os Post-its no mural:
-![Sorting](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/1c09d2fd-c4e7-4521-9e71-f0d0c92e7a78)
+![Sorting](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/597eb752-5b90-482c-bc00-d9eaa328cff8)
 
 ## Demonstração de página 404
 Demonstração de página 404, caso o usuário tente acessar uma página inexistente.
-![erro404_4](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/2c3ceb98-76a0-4cb3-879d-6ab678c071fc)
+![erro404_4](https://github.com/devluisrodrigues/Site-Post-it/assets/103431660/a99842f1-cf9d-4ebf-8e77-c5b6dfccc577)
